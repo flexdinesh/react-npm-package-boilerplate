@@ -59,10 +59,14 @@ export default () => ({
                 ]
             },
             {
-                test: /\.(css)$/,
-                loader: 'style-loader!css-loader',
+                test: /\.(scss)$/,
+                loader: 'style-loader!css-loader!sass-loader',
             },
         ]
+    },
+
+    resolve: {
+      extensions: ['.js', '.jsx', '.scss'],
     },
 
     plugins: [

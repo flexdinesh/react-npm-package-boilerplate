@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-// import './MyComponent.style';
+import './MyComponent.style';
 
 class MyComponent extends React.Component {
     constructor(props) {
