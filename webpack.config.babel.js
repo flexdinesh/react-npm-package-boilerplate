@@ -40,6 +40,10 @@ export default () => ({
       },
     ]
   },
+  
+  resolve: {
+    extensions: ['.js', '.jsx', '.scss'],
+  },
 
   plugins: [
     // Clean dist folder
