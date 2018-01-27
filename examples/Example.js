@@ -12,9 +12,9 @@ class Example extends React.Component {
   render() {
     return (
       <div>
-      <MyComponent/>
-    </div>
-  );
+        <MyComponent/>
+      </div>
+    );
   }
 }
 

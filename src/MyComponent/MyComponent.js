@@ -6,23 +6,21 @@ import React from 'react';
 import './MyComponent.style';
 
 class MyComponent extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
-    componentDidMount() {
+  componentDidMount() {}
 
-    }
-
-    render() {
-        return (
-            <div className='my-component'>
-                <i className='icon-test'>One</i><br></br>
-                <i className='icon-test'>Two</i><br></br>
-                <i className='icon-test'>Three</i>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div className='my-component'>
+        <i className='icon-test'>One</i><br></br>
+        <i className='icon-test'>Two</i><br></br>
+        <i className='icon-test'>Three</i>
+      </div>
+    )
+  }
 }
 
 export default MyComponent;
