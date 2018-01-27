@@ -1,0 +1,14 @@
+# Don't check auto-generated stuff into git
+node_modules
+coverage
+build
+dist
+
+# Cruft
+.DS_Store
+npm-debug.log
+.idea
+
+# lock files
+package-lock.json
+yarn.lock
