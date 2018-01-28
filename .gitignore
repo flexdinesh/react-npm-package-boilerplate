@@ -1,12 +1,8 @@
-# Don't check auto-generated stuff into git
 node_modules
+dist/*.js
+examples/dist/*.js
 coverage
-build
-dist
 
-# Cruft
-.DS_Store
-npm-debug.log
 .idea
 
 # lock files
