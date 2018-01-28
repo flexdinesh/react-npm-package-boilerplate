@@ -1,11 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
 import MyComponent from 'index';
 
-describe('<index />', () => {
-
+describe('MyComponent', () => {
   it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<MyComponent />, div);
+    const wrapper = shallow(<MyComponent />);
+    expect(wrapper).toHaveLength(1);
+  });
+
+  it('should render name from prop', () => {
+    const wrapper = shallow(<MyComponent name='Jack'/>);
+    expect(wrapper.find('.name-holder').text()).toContain('My name is - Jack');
   });
 });

@@ -19,7 +19,7 @@ class MyComponent extends React.Component {
         <i className='icon-test'>One</i><br></br>
         <i className='icon-test'>Two</i><br></br>
         <i className='icon-test'>Three</i>
-        <div>My name is - {name}</div>
+        <div className='name-holder'>My name is - {name}</div>
       </div>
     )
   }

@@ -25,7 +25,8 @@
     "chai": "^4.1.2",
     "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.28.0",
-    "enzyme": "^3.1.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.9.0",
     "eslint-plugin-react": "^7.4.0",
     "jest": "^22.1.4",
@@ -47,6 +48,7 @@
       "jsx",
       "scss"
     ],
+    "setupFiles": ["./test/jest-setup.js"],
     "transform": {
       "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
