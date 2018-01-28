@@ -48,7 +48,7 @@
       "jsx",
       "scss"
     ],
-    "setupFiles": ["./test/jest-setup.js"],
+    "setupFiles": ["<rootDir>/config/jest/setup.js"],
     "transform": {
       "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
