@@ -1,5 +1,4 @@
 import path from 'path';
-import webpack from 'webpack';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 const packageJson = require('./package.json');
 

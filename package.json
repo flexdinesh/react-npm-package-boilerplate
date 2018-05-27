@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --config webpack.config.babel.js",
-    "release": "webpack --p --config webpack.config.babel.js",
-    "test": "jest",
+    "clean": "rm -rf dist",
+    "test": "npm run lint && npm run coverage",
     "coverage": "jest --coverage",
-    "deploy": "",
     "lint": "eslint ./src",
     "build-examples": "webpack --config examples/webpack.config.babel.js --progress",
-    "start": "webpack-dev-server --config examples/webpack.config.live.babel.js"
+    "start": "webpack-dev-server --config examples/webpack.config.live.babel.js",
+    "prepublish": "npm run clean && npm run test && npm run build"
   },
   "dependencies": {
     "prop-types": "^15.6.0",
@@ -60,6 +60,7 @@
     },
     "transformIgnorePatterns": [
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
-    ]
+    ],
+    "coverageReporters": ["json", "lcov", "text-summary"]
   }
 }
