@@ -4,6 +4,7 @@ import CleanWebpackPlugin from 'clean-webpack-plugin';
 const packageJson = require('./package.json');
 
 export default () => ({
+  mode: 'production',
   entry: {
     index: path.join(__dirname, 'src/index.js'),
   },
@@ -46,20 +47,12 @@ export default () => ({
   },
 
   plugins: [
-    // Clean dist folder
     new CleanWebpackPlugin(['dist/*.*']),
-
-    //CommonChunksPlugin will now extract all the common modules from vendor and main bundles
-    //https://medium.com/@adamrackis/vendor-and-code-splitting-in-webpack-2-6376358f1923
-    new webpack.optimize.CommonsChunkPlugin({
+  ],
+  optimization: {
+    splitChunks: { 
       name: 'vendor',
-      minChunks(module) {
-        return module.context && module.context.indexOf('node_modules') !== -1;
-      },
-    }),
-
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'manifest'
-    })
-  ]
+      minChunks: 2
+    }
+  }
 });

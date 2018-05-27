@@ -3,6 +3,7 @@ import webpack from 'webpack'; //eslint-disable-line
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 
 export default () => ({
+  mode: 'production',
   entry: {
     index: path.join(__dirname, './index.js'),
   },
