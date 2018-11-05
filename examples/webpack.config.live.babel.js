@@ -50,30 +50,24 @@ export default () => ({
           {
             loader: 'babel-loader',
             options: {
-              babelrc: false,
-              presets: [
-                ['es2015', { modules: false }],
-                'react',
-              ],
+              presets: ['@babel/preset-env', '@babel/preset-react']
             }
           }
         ]
       },
       {
         test: /\.(scss)$/,
-        loader: 'style-loader!css-loader!sass-loader',
-      },
+        loader: 'style-loader!css-loader!sass-loader'
+      }
     ]
   },
 
   resolve: {
-    extensions: ['.js', '.jsx', '.scss'],
+    extensions: ['.js', '.jsx', '.scss']
   },
 
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-  ],
+  plugins: [new webpack.HotModuleReplacementPlugin()],
   optimization: {
-    namedModules: true,
+    namedModules: true
   }
 });
