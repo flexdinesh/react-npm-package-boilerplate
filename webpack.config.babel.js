@@ -12,7 +12,8 @@ export default () => ({
     path: path.join(__dirname, 'dist'),
     filename: '[name].js',
     library: packageJson.name,
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    globalObject: 'this'
   },
 
   module: {
